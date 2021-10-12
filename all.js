@@ -218,7 +218,6 @@ function taskStatusHandler(e) {
   updateCompletedTaskData()
   rerenderHandler()
   changeTaskCount()
-  taskTextCheckEffect()
 }
 
 // 原始全部資料 => 切換 isCompleted 狀態
@@ -246,12 +245,6 @@ function changeTaskCount() {
   filterAllCount.textContent = `(${data.length})`
   filterUncompletedCount.textContent = `(${uncompletedTaskData.length})`
   filterCompletedCount.textContent = `(${completedTaskData.length})`
-}
-
-// Check 後的文字效果
-function taskTextCheckEffect() {
-  let currentTaskText = document.querySelector(`span[data-taskTextId="${checkInput.dataset.id}"]`)
-
 }
 
 // ----- 篩選待辦事項 -----
