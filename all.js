@@ -263,7 +263,6 @@ function taskFilterHandler(e) {
   completedTaskFilter(e)
   filterSelectBlockHandler(target)
   filterTextColorChange(e)
-  console.log(filterStatus)
 }
 
 // filterSelectBlock 效果

@@ -85,12 +85,18 @@ button {
 
 .title {
   font-size: 48px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: .2em;
   text-align: center;
   color: #333;
-  padding: 10px 0;
+  padding: 10px 0 10px 64px;
   margin-bottom: 30px;
+}
+
+.title > .smallText {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .input {
