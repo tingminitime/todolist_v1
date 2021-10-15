@@ -8,6 +8,7 @@
   // outline: 1px solid rgba(red, .25)
 
 $yellow: #ffd370
+$red: #ff3535
 
 body
   font-family: 'Noto Sans TC', sans-serif
@@ -143,12 +144,30 @@ button
     color: #fff
     border-radius: 6px
   &__deleteBtn
-    background-color: #ff3535
+    background-color: $red
     &:hover
-      background-color: lighten(#ff3535, 10)
+      background-color: lighten($red, 10)
   &__editBtn
     background-color: #333
     &:hover
       background-color: lighten(#333, 10)
   &__updateText
     display: none
+  &__itemEdit
+    padding: 5px 10px
+  &__editInput
+    padding: 5px 10px
+    font-size: 20px
+    border: none
+    border-bottom: 2px solid #333
+    &:focus
+      outline: none
+  &__confirmBtn, &__cancelBtn
+    font-size: 16px
+    font-weight: 700
+    padding: 5px 10px
+    margin: 0 5px
+    border-radius: 6px
+    &:hover
+      transform: scale(1.1)
+      background-color: $yellow
