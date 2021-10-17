@@ -72,9 +72,11 @@ function render(data) {
             data-editInputId="${item['id']}"
             data-id="${item['id']}"
           >
-          <button class="taskList__confirmBtn" data-id="${item['id']}">確定</button>
-          <span> | <span>
-          <button class="taskList__cancelBtn" data-id="${item['id']}">取消</button>
+          <div class="taskList__editControl">
+            <button class="taskList__confirmBtn" data-id="${item['id']}">確定</button>
+            <span> | </span>
+            <button class="taskList__cancelBtn" data-id="${item['id']}">取消</button>
+          </div>
         </div>
       </li>
     `

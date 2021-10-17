@@ -76,6 +76,12 @@ button {
   padding: 30px 0;
 }
 
+@media (max-width: 767px) {
+  .todolist {
+    padding: 30px 20px;
+  }
+}
+
 .todolist__data {
   padding: 10px;
   border-radius: 10px;
@@ -86,17 +92,32 @@ button {
 .title {
   font-size: 48px;
   font-weight: 700;
-  letter-spacing: .2em;
+  letter-spacing: .2rem;
   text-align: center;
   color: #333;
   padding: 10px 0 10px 64px;
   margin-bottom: 30px;
 }
 
+@media (max-width: 767px) {
+  .title {
+    padding: 10px 20px;
+    letter-spacing: .1rem;
+    margin-bottom: 20px;
+  }
+}
+
 .title > .smallText {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+  .title > .smallText {
+    display: block;
+    padding: 10px 0;
+  }
 }
 
 .input {
@@ -117,6 +138,7 @@ button {
   -webkit-box-flex: 10;
       -ms-flex: 10;
           flex: 10;
+  width: 100%;
   font-size: 24px;
   padding: 5px 10px;
   border: none;
@@ -226,25 +248,28 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.taskList__itemEdit {
-  display: none;
-}
-
-.taskList__itemEdit.active {
-  display: block;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .taskList__label {
   -webkit-box-flex: 10;
       -ms-flex: 10;
           flex: 10;
+  width: 100%;
   padding: 15px 8px;
   cursor: pointer;
   -webkit-transition: .2s;
   transition: .2s;
   border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+  .taskList__label {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
 }
 
 .taskList__label:hover {
@@ -276,6 +301,14 @@ button {
   border-radius: 6px;
 }
 
+@media (max-width: 767px) {
+  .taskList__deleteBtn, .taskList__editBtn {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+}
+
 .taskList__deleteBtn {
   background-color: #ff3535;
 }
@@ -298,6 +331,24 @@ button {
 
 .taskList__itemEdit {
   padding: 5px 10px;
+  display: none;
+}
+
+.taskList__itemEdit.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .taskList__itemEdit.active {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .taskList__editInput {
@@ -307,8 +358,20 @@ button {
   border-bottom: 2px solid #333;
 }
 
+@media (max-width: 767px) {
+  .taskList__editInput {
+    width: 100%;
+  }
+}
+
 .taskList__editInput:focus {
   outline: none;
+}
+
+@media (max-width: 767px) {
+  .taskList__editControl {
+    text-align: right;
+  }
 }
 
 .taskList__confirmBtn, .taskList__cancelBtn {
@@ -317,6 +380,13 @@ button {
   padding: 5px 10px;
   margin: 0 5px;
   border-radius: 6px;
+}
+
+@media (max-width: 767px) {
+  .taskList__confirmBtn, .taskList__cancelBtn {
+    font-size: 16px;
+    margin: 10px 0;
+  }
 }
 
 .taskList__confirmBtn:hover, .taskList__cancelBtn:hover {
